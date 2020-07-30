@@ -14,8 +14,15 @@ import {
   View,
   Text,
   StatusBar,
-  Image
 } from 'react-native';
+
+import {
+  Header,
+  LearnMoreLinks,
+  Colors,
+  DebugInstructions,
+  ReloadInstructions,
+} from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
   return (
@@ -25,11 +32,9 @@ const App: () => React$Node = () => {
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-            <View style={styles.container}>
-              <View style={{flexDirection: 'row', justifyContent: 'center', backgroundColor: "#eee",}}>
-                <Image style={styles.image} source={{uri: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596082973924&di=534771bb6833fadb4478485c9bfb8311&imgtype=0&src=http%3A%2F%2Ft8.baidu.com%2Fit%2Fu%3D1484500186%2C1503043093%26fm%3D79%26app%3D86%26f%3DJPEG%3Fw%3D1280%26h%3D853'}}></Image>
-              </View>
-            </View>
+          <View style={styles.container}>
+            <Text>Hello world</Text>
+          </View>
         </ScrollView>
       </SafeAreaView>
     </>
@@ -37,17 +42,13 @@ const App: () => React$Node = () => {
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
-  },
+  scrollView: {},
   container: {
-  },
-  image: {
-    resizeMode: "cover",
+    flex: 1,
     width: 100,
     height: 100,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
+    backgroundColor: 'red',
+  },
 });
 
 export default App;
